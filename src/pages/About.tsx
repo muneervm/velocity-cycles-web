@@ -38,7 +38,7 @@ const About = () => (
             <div className="font-display text-3xl font-bold text-gradient-primary"><Counter to={10000} suffix="+" /></div>
             <div className="text-xs text-muted-foreground uppercase tracking-widest mt-1">Riders Served</div>
           </motion.div>
-        </motion.div>
+          </div>
 
         <motion.div
           initial={{ opacity: 0, x: 40 }}
