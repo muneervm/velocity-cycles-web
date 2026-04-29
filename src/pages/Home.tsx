@@ -178,11 +178,11 @@ const Home = () => {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true, margin: "-60px" }}
-                whileHover={{ y: -8 }}
-                className="group relative p-7 rounded-2xl glass hover:border-primary/40 transition-all"
+                whileHover={{ y: -4 }}
+                transition={{ duration: 0.3, ease: EASE }}
+                className="group relative p-7 rounded-2xl glass hover:border-primary/30 transition-colors"
               >
-                <div className="absolute inset-0 rounded-2xl bg-gradient-primary opacity-0 group-hover:opacity-10 transition-opacity" />
-                <div className="w-12 h-12 rounded-xl bg-primary/15 grid place-items-center text-primary-glow mb-5 group-hover:scale-110 group-hover:rotate-6 transition-transform">
+                <div className="w-12 h-12 rounded-xl bg-primary/15 grid place-items-center text-primary-glow mb-5">
                   <f.icon size={22} />
                 </div>
                 <h3 className="font-display font-semibold text-lg mb-2">{f.title}</h3>
@@ -210,11 +210,12 @@ const Home = () => {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true, margin: "-60px" }}
-                whileHover={{ y: -10 }}
-                className="group relative rounded-2xl overflow-hidden glass hover:shadow-lift transition-all"
+                whileHover={{ y: -5 }}
+                transition={{ duration: 0.3, ease: EASE }}
+                className="group relative rounded-2xl overflow-hidden glass hover:shadow-lift transition-shadow"
               >
                 <div className="aspect-square overflow-hidden bg-gradient-to-br from-primary/5 to-accent/5">
-                  <img src={p.img} alt={p.name} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                  <img src={p.img} alt={p.name} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="p-5">
@@ -258,7 +259,7 @@ const Home = () => {
               <p className="mt-4 text-muted-foreground">Free helmet & 1-year service plan with every premium cycle this season.</p>
             </div>
             <div className="md:justify-self-end">
-              <Link to="/products" className="inline-flex items-center gap-2 px-7 py-4 rounded-2xl bg-gradient-primary text-primary-foreground font-semibold shadow-glow-soft hover:shadow-glow hover:scale-[1.03] transition-all">
+              <Link to="/products" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-primary text-primary-foreground font-semibold shadow-glow-soft hover:shadow-glow transition-shadow">
                 Claim Offer <ArrowRight size={18} />
               </Link>
             </div>
@@ -279,7 +280,7 @@ const Home = () => {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true }}
-                whileHover={{ y: -6 }}
+                whileHover={{ y: -3 }}
                 className="relative p-7 rounded-2xl glass hover:border-primary/30 transition"
               >
                 <Quote className="text-primary-glow/40 mb-3" size={28} />

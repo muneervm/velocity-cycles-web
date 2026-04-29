@@ -30,15 +30,12 @@ const Services = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ delay: i * 0.08, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            whileHover={{ y: -10, rotateX: 4, rotateY: -4 }}
-            style={{ transformStyle: "preserve-3d" }}
-            className="group relative p-8 rounded-3xl glass hover:border-primary/40 transition-all overflow-hidden"
+            whileHover={{ y: -5 }}
+            transition={{ delay: i * 0.06, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            className="group relative p-8 rounded-3xl glass hover:border-primary/30 transition-colors overflow-hidden"
           >
-            <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-[0.08] transition-opacity" />
-            <div className="absolute -top-20 -right-20 w-48 h-48 bg-primary/30 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
-
             <div className="relative">
-              <div className="w-14 h-14 rounded-2xl bg-gradient-primary grid place-items-center text-primary-foreground shadow-glow-soft group-hover:scale-110 group-hover:rotate-6 transition-transform">
+              <div className="w-14 h-14 rounded-2xl bg-gradient-primary grid place-items-center text-primary-foreground shadow-glow-soft transition-transform group-hover:scale-105">
                 <s.icon size={24} />
               </div>
               <h3 className="mt-6 font-display font-semibold text-xl">{s.title}</h3>
@@ -61,7 +58,7 @@ const Services = () => (
         <div className="relative">
           <h3 className="font-display text-3xl md:text-4xl font-bold">Need a tune-up?</h3>
           <p className="mt-3 text-muted-foreground max-w-xl mx-auto">Walk in to our Nedumangad workshop or book a slot online — most repairs done same day.</p>
-          <a href="/contact" className="inline-flex mt-6 items-center gap-2 px-7 py-4 rounded-2xl bg-gradient-primary text-primary-foreground font-semibold shadow-glow-soft hover:shadow-glow hover:scale-[1.03] transition">
+          <a href="/contact" className="inline-flex mt-6 items-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-primary text-primary-foreground font-semibold shadow-glow-soft hover:shadow-glow transition-shadow">
             Book a Service
           </a>
         </div>

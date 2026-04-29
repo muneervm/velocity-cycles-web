@@ -6,15 +6,14 @@ export const WhatsAppFab = () => (
     href="https://wa.me/919876543210"
     target="_blank"
     rel="noreferrer"
-    initial={{ scale: 0, rotate: -90 }}
-    animate={{ scale: 1, rotate: 0 }}
-    transition={{ delay: 1, type: "spring", stiffness: 200 }}
+    initial={{ opacity: 0, scale: 0.8 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ delay: 0.6, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
     className="fixed bottom-6 right-6 z-40 group"
     aria-label="Chat on WhatsApp"
   >
-    <span className="absolute inset-0 rounded-full bg-primary/50 blur-xl animate-pulse-glow" />
-    <span className="relative grid place-items-center w-14 h-14 rounded-full bg-gradient-primary text-primary-foreground shadow-glow group-hover:scale-110 transition-transform">
-      <MessageCircle size={24} />
+    <span className="grid place-items-center w-13 h-13 w-[52px] h-[52px] rounded-full bg-gradient-primary text-primary-foreground shadow-glow-soft transition-transform group-hover:scale-105">
+      <MessageCircle size={22} />
     </span>
   </motion.a>
 );

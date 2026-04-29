@@ -32,9 +32,7 @@ const About = () => (
         >
           <div className="absolute -inset-4 bg-gradient-primary blur-3xl opacity-20 rounded-3xl" />
           <img src={workshop} alt="Toysvilla workshop in Nedumangad" loading="lazy" className="relative rounded-3xl shadow-elegant w-full" />
-          <motion.div
-            animate={{ y: [0, -10, 0] }}
-            transition={{ duration: 4, repeat: Infinity }}
+          <div
             className="absolute -bottom-6 -right-6 glass-strong rounded-2xl p-5 shadow-glow-soft hidden md:block"
           >
             <div className="font-display text-3xl font-bold text-gradient-primary"><Counter to={10000} suffix="+" /></div>
@@ -84,7 +82,7 @@ const About = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1, duration: 0.7 }}
-            whileHover={{ y: -8 }}
+            whileHover={{ y: -4 }}
             className="p-8 rounded-3xl glass hover:border-primary/40 transition-all"
           >
             <div className="w-12 h-12 rounded-xl bg-primary/15 grid place-items-center text-primary-glow mb-5">
