@@ -33,29 +33,30 @@ export const Navbar = () => {
         scrolled ? "py-3" : "py-5"
       }`}
     >
-      <div className={`mx-auto max-w-7xl px-5 md:px-8`}>
-        <div className={`flex items-center justify-between rounded-2xl px-5 md:px-7 py-3.5 transition-all duration-500 ${
-          scrolled ? "glass-strong shadow-elegant" : "bg-transparent"
-        }`}>
+      <div className="px-6 w-full">
+        <div className="mx-auto max-w-7xl relative">
+          <div className={`flex items-center justify-between rounded-2xl px-5 md:px-7 py-3.5 transition-all duration-500 ${
+            scrolled ? "glass-strong shadow-elegant" : "bg-transparent"
+          }`}>
           <Link to="/" className="flex items-center gap-2.5 group">
-            <span className="relative w-9 h-9 rounded-xl bg-gradient-primary grid place-items-center font-display font-bold text-primary-foreground shadow-glow-soft transition-transform group-hover:scale-105">
-              T
-            </span>
+            <div className="relative w-12 h-12 rounded-xl bg-gradient-primary shadow-glow-soft overflow-hidden transition-transform group-hover:scale-105 flex items-center justify-center p-1.5">
+              <img src="/logo.png" alt="Toysvilla" className="w-full h-full object-contain" />
+            </div>
             <div className="leading-tight">
-              <div className="font-display font-bold text-base">Toysvilla</div>
-              <div className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Cycle Shop</div>
+              <div className="font-display font-bold text-base">Toys Villa Cycles</div>
+              <div className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Kulavikkonam · Nedumangad</div>
             </div>
           </Link>
 
-          <nav className="hidden md:flex items-center gap-1">
+          <nav className="hidden md:flex items-center gap-4">
             {links.map((l) => (
               <NavLink
                 key={l.to}
                 to={l.to}
                 end={l.to === "/"}
                 className={({ isActive }) =>
-                  `relative px-4 py-2 text-sm rounded-lg transition-colors ${
-                    isActive ? "text-primary-glow" : "text-muted-foreground hover:text-foreground"
+                  `relative px-4 py-2 text-sm rounded-lg font-medium transition-colors ${
+                    isActive ? "text-primary" : "text-black hover:text-primary"
                   }`
                 }
               >
@@ -65,7 +66,9 @@ export const Navbar = () => {
                     {isActive && (
                       <motion.span
                         layoutId="navActive"
-                        className="absolute inset-0 rounded-lg bg-primary/10 border border-primary/20 -z-10"
+                        className={`absolute inset-0 rounded-lg -z-10 ${
+                          scrolled ? "bg-primary/10 border border-primary/20" : "bg-white shadow-sm border border-primary/10"
+                        }`}
                         transition={{ type: "spring", stiffness: 380, damping: 30 }}
                       />
                     )}
@@ -105,8 +108,8 @@ export const Navbar = () => {
                   to={l.to}
                   end={l.to === "/"}
                   className={({ isActive }) =>
-                    `px-4 py-3 rounded-lg text-sm ${
-                      isActive ? "bg-primary/15 text-primary-glow" : "text-muted-foreground"
+                    `px-4 py-3 rounded-lg text-sm font-medium ${
+                      isActive ? "bg-primary/15 text-primary" : "text-black"
                     }`
                   }
                 >
@@ -116,6 +119,7 @@ export const Navbar = () => {
             </motion.div>
           )}
         </AnimatePresence>
+        </div>
       </div>
     </motion.header>
   );

@@ -28,6 +28,7 @@ const About = () => (
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
+          data-aos="fade-right"
           className="relative"
         >
           <div className="absolute -inset-4 bg-gradient-primary blur-3xl opacity-20 rounded-3xl" />
@@ -45,6 +46,7 @@ const About = () => (
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
+          data-aos="fade-left"
         >
           <h3 className="font-display text-3xl md:text-4xl font-bold leading-tight">
             More than a shop — <span className="text-gradient-primary">a riding community.</span>
@@ -83,6 +85,8 @@ const About = () => (
             viewport={{ once: true }}
             transition={{ delay: i * 0.1, duration: 0.7 }}
             whileHover={{ y: -4 }}
+            data-aos="fade-up"
+            data-aos-delay={i * 100}
             className="p-8 rounded-3xl glass hover:border-primary/40 transition-all"
           >
             <div className="w-12 h-12 rounded-xl bg-primary/15 grid place-items-center text-primary-glow mb-5">
@@ -106,6 +110,8 @@ const About = () => (
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.6 }}
+              data-aos={i % 2 === 0 ? "fade-right" : "fade-left"}
+              data-aos-delay={i * 100}
               className={`relative pl-12 md:pl-0 md:grid md:grid-cols-2 md:gap-10 mb-10 ${i % 2 === 0 ? "" : "md:flex-row-reverse"}`}
             >
               <div className="absolute left-0 md:left-1/2 top-2 -translate-x-1/2 w-4 h-4 rounded-full bg-gradient-primary shadow-glow-soft ring-4 ring-background" />

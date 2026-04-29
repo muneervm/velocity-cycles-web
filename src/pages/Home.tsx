@@ -48,9 +48,9 @@ const Home = () => {
     <>
       {/* HERO */}
       <section ref={heroRef} className="relative min-h-screen flex items-center overflow-hidden pt-24">
-        <motion.div style={{ y, scale }} className="absolute inset-0 -z-20">
+        <motion.div style={{ y, scale }} className="absolute inset-0 -z-20 [mask-image:linear-gradient(to_bottom,black_70%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,black_70%,transparent_100%)]">
           <img src={heroImg} alt="Premium bicycle on misty mountain road" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/70 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/50 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-transparent to-background/60" />
         </motion.div>
         <Blobs />
@@ -61,7 +61,7 @@ const Home = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full text-xs uppercase tracking-[0.2em] text-primary-glow"
+              className="inline-flex items-center gap-2 px-4 py-2 glass border-gray-300 rounded-full text-xs uppercase tracking-[0.2em] text-primary-glow"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-primary-glow" />
               Nedumangad · Kerala · Est. 2014
@@ -138,18 +138,30 @@ const Home = () => {
           >
             <div className="relative">
               <div className="absolute -inset-6 bg-gradient-primary rounded-[2.5rem] blur-3xl opacity-15" />
-              <div className="relative glass-strong rounded-[2rem] p-7 shadow-elegant">
-                <div className="flex items-center justify-between mb-5">
-                  <span className="text-xs uppercase tracking-[0.2em] text-primary-glow">Featured</span>
-                  <span className="px-2.5 py-1 rounded-full bg-primary/20 text-primary-glow text-[10px] font-semibold">NEW</span>
+              <div className="relative glass rounded-[2rem] overflow-hidden shadow-elegant group">
+                <div className="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-primary/5 to-accent/10">
+                  <img src={productMountain} alt="Trail Hawk Pro" loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-white text-black text-[10px] uppercase tracking-widest font-semibold shadow-sm">
+                    Featured
+                  </div>
+                  <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-primary text-white text-[10px] font-semibold shadow-sm">
+                    NEW
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/50 via-background/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
-                <img src={productMountain} alt="Trail Hawk Pro" loading="lazy" className="w-full h-56 object-contain" />
-                <div className="mt-4">
-                  <div className="font-display font-semibold text-xl">Trail Hawk Pro</div>
-                  <div className="text-sm text-muted-foreground">Carbon hardtail · 21-speed</div>
-                  <div className="mt-3 flex items-center justify-between">
-                    <span className="font-display text-2xl text-gradient-primary font-bold">₹ 24,999</span>
-                    <Link to="/products" className="text-sm text-primary-glow hover:underline">View →</Link>
+                <div className="p-7">
+                  <div className="text-xs text-muted-foreground uppercase tracking-widest">Carbon hardtail · 21-speed</div>
+                  <div className="mt-1 flex items-center justify-between">
+                    <h3 className="font-display font-semibold text-2xl">Trail Hawk Pro</h3>
+                  </div>
+                  <div className="mt-4 flex items-center justify-between">
+                    <span className="font-display text-2xl font-bold text-gradient-primary">₹ 24,999</span>
+                    <Link
+                      to="/contact"
+                      className="px-4 py-2 rounded-full bg-white border border-primary text-primary hover:bg-gradient-primary hover:text-primary-foreground hover:border-transparent text-xs font-semibold transition-all hover:shadow-glow-soft"
+                    >
+                      Enquire Now
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -180,6 +192,8 @@ const Home = () => {
                 viewport={{ once: true, margin: "-60px" }}
                 whileHover={{ y: -4 }}
                 transition={{ duration: 0.3, ease: EASE }}
+                data-aos="fade-up"
+                data-aos-delay={i * 100}
                 className="group relative p-7 rounded-2xl glass hover:border-primary/30 transition-colors"
               >
                 <div className="w-12 h-12 rounded-xl bg-primary/15 grid place-items-center text-primary-glow mb-5">
@@ -212,6 +226,8 @@ const Home = () => {
                 viewport={{ once: true, margin: "-60px" }}
                 whileHover={{ y: -5 }}
                 transition={{ duration: 0.3, ease: EASE }}
+                data-aos="zoom-in"
+                data-aos-delay={i * 100}
                 className="group relative rounded-2xl overflow-hidden glass hover:shadow-lift transition-shadow"
               >
                 <div className="aspect-square overflow-hidden bg-gradient-to-br from-primary/5 to-accent/5">
@@ -246,6 +262,7 @@ const Home = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
+          data-aos="fade-up"
           className="relative max-w-6xl mx-auto rounded-3xl overflow-hidden p-10 md:p-16 glass-strong"
         >
           <div className="absolute -top-24 -right-24 w-96 h-96 bg-primary/40 blur-3xl rounded-full" />
@@ -281,6 +298,8 @@ const Home = () => {
                 whileInView="show"
                 viewport={{ once: true }}
                 whileHover={{ y: -3 }}
+                data-aos="fade-up"
+                data-aos-delay={i * 120}
                 className="relative p-7 rounded-2xl glass hover:border-primary/30 transition"
               >
                 <Quote className="text-primary-glow/40 mb-3" size={28} />

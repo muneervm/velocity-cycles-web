@@ -23,6 +23,8 @@ export const WaveDivider = ({ flip = false }: { flip?: boolean }) => (
       <path
         d="M0,80 C320,32 640,128 960,80 C1200,48 1320,96 1440,80 L1440,120 L0,120 Z"
         fill="hsl(0 0% 100% / 0.95)"
+        stroke="hsl(220 13% 91%)"
+        strokeWidth="2"
       />
     </svg>
   </div>
@@ -37,7 +39,7 @@ export const SectionHeader = ({ kicker, title, sub }: { kicker?: string; title: 
     className="text-center max-w-2xl mx-auto mb-14"
   >
     {kicker && (
-      <span className="inline-block px-4 py-1.5 mb-4 text-xs uppercase tracking-[0.2em] glass rounded-full text-primary-glow">
+      <span className="inline-block px-8 py-2 mb-4 text-xs uppercase tracking-[0.2em] bg-white border border-primary/50 rounded-lg text-primary-glow">
         {kicker}
       </span>
     )}

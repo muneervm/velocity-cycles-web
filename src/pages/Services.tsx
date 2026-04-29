@@ -31,6 +31,8 @@ const Services = () => (
             viewport={{ once: true, margin: "-60px" }}
             transition={{ delay: i * 0.06, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             whileHover={{ y: -5 }}
+            data-aos="fade-up"
+            data-aos-delay={i * 80}
             className="group relative p-8 rounded-3xl glass hover:border-primary/30 transition-colors overflow-hidden"
           >
             <div className="relative">
@@ -50,6 +52,7 @@ const Services = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.7 }}
+        data-aos="zoom-in"
         className="mt-16 relative rounded-3xl glass-strong p-10 md:p-14 text-center overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-primary opacity-10" />

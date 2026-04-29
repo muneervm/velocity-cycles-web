@@ -9,22 +9,26 @@ export const Footer = () => (
       <div className="absolute inset-0 grid-pattern opacity-40" />
       <div className="relative max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-4 gap-10">
         <div className="md:col-span-2">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="w-10 h-10 rounded-xl bg-gradient-primary grid place-items-center font-display font-bold text-primary-foreground">T</span>
-            <div>
-              <div className="font-display font-bold text-lg">Toysvilla Cycle Shop</div>
-              <div className="text-xs text-muted-foreground uppercase tracking-widest">Nedumangad · Kerala</div>
+          <div className="border border-primary/50 rounded-2xl p-5 inline-block">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="relative w-12 h-12 rounded-xl bg-gradient-primary shadow-glow-soft overflow-hidden flex items-center justify-center p-1.5">
+                <img src="/logo.png" alt="Toysvilla" className="w-full h-full object-contain" />
+              </div>
+              <div>
+                <div className="font-display font-bold text-lg">Toys Villa Cycles</div>
+                <div className="text-xs text-muted-foreground uppercase tracking-widest">Kulavikkonam · Nedumangad</div>
+              </div>
             </div>
-          </div>
-          <p className="text-muted-foreground max-w-md leading-relaxed">
-            Crafting joyful rides for every generation. Premium cycles, expert service and a community built on the love of two wheels.
-          </p>
-          <div className="flex gap-3 mt-6">
-            {[Instagram, Facebook].map((Icon, i) => (
-              <a key={i} href="#" className="glass w-10 h-10 grid place-items-center rounded-full hover:bg-primary/20 hover:text-primary-glow transition">
-                <Icon size={16} />
-              </a>
-            ))}
+            <p className="text-muted-foreground max-w-md leading-relaxed">
+              Crafting joyful rides for every generation. Premium cycles, expert service and a community built on the love of two wheels.
+            </p>
+            <div className="flex gap-3 mt-6">
+              {[Instagram, Facebook].map((Icon, i) => (
+                <a key={i} href="#" className="glass w-10 h-10 grid place-items-center rounded-full hover:bg-primary/20 hover:text-primary-glow transition">
+                  <Icon size={16} />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
 
@@ -48,9 +52,10 @@ export const Footer = () => (
         <div>
           <h4 className="font-display font-semibold mb-4">Reach Us</h4>
           <ul className="space-y-3 text-sm text-muted-foreground">
-            <li className="flex gap-3"><MapPin size={16} className="text-primary-glow shrink-0 mt-0.5"/> Main Road, Nedumangad, Kerala 695541</li>
-            <li className="flex gap-3"><Phone size={16} className="text-primary-glow shrink-0 mt-0.5"/> +91 98765 43210</li>
-            <li className="flex gap-3"><Mail size={16} className="text-primary-glow shrink-0 mt-0.5"/> hello@toysvilla.in</li>
+            <li className="flex gap-3"><MapPin size={16} className="text-primary-glow shrink-0 mt-0.5"/> Kulavikkonam, Nedumangad, Kerala 695541</li>
+            <li className="flex gap-3"><Phone size={16} className="text-primary-glow shrink-0 mt-0.5"/> +91 99465 20720</li>
+            <li className="flex gap-3"><Phone size={16} className="text-primary-glow shrink-0 mt-0.5"/> +91 73065 56262</li>
+            <li className="flex gap-3"><Mail size={16} className="text-primary-glow shrink-0 mt-0.5"/> toysvillatvm@gmail.com</li>
           </ul>
         </div>
       </div>

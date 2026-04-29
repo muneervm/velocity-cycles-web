@@ -19,8 +19,8 @@ const FloatingInput = ({ label, type = "text", value, onChange, as = "input" }: 
         onFocus={() => setFocused(true)}
         onBlur={() => setFocused(false)}
         rows={as === "textarea" ? 4 : undefined}
-        className={`peer w-full px-4 pt-6 pb-2 rounded-xl bg-white/[0.03] border transition-all outline-none resize-none ${
-          focused ? "border-primary/60 shadow-[0_0_0_4px_hsl(var(--primary)/0.1)]" : "border-white/10"
+        className={`peer w-full px-4 pt-6 pb-2 rounded-xl border transition-all outline-none resize-none ${
+          focused ? "bg-white border-primary/60 shadow-[0_0_0_4px_hsl(var(--primary)/0.1)]" : "bg-white/50 border-black/10 hover:border-black/20 hover:bg-white"
         }`}
       />
       <label
@@ -130,9 +130,9 @@ const Contact = () => {
             className="lg:col-span-2 space-y-5"
           >
             {[
-              { icon: MapPin, label: "Visit Us", val: "Main Road, Nedumangad\nThiruvananthapuram, Kerala 695541" },
-              { icon: Phone, label: "Call Us", val: "+91 98765 43210\nMon–Sat · 9:30 AM – 8:30 PM" },
-              { icon: Mail, label: "Email", val: "hello@toysvilla.in" },
+              { icon: MapPin, label: "Visit Us", val: "Kulavikkonam, Nedumangad\nThiruvananthapuram, Kerala 695541" },
+              { icon: Phone, label: "Call Us", val: "+91 99465 20720\n+91 73065 56262\nMon–Sat · 9:30 AM – 8:30 PM" },
+              { icon: Mail, label: "Email", val: "toysvillatvm@gmail.com" },
             ].map((c, i) => (
               <motion.div
                 key={c.label}

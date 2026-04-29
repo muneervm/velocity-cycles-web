@@ -70,16 +70,18 @@ const Products = () => {
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ delay: i * 0.05, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
                 whileHover={{ y: -5 }}
+                data-aos="zoom-in"
+                data-aos-delay={i * 80}
                 className="group relative rounded-3xl overflow-hidden"
               >
                 <div className="absolute -inset-px rounded-3xl bg-gradient-to-br from-primary/30 via-transparent to-accent/30 opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="relative glass rounded-3xl overflow-hidden">
                   <div className="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-primary/5 to-accent/10">
                     <img src={p.img} alt={p.name} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                    <div className="absolute top-4 left-4 px-3 py-1 rounded-full glass-strong text-[10px] uppercase tracking-widest text-primary-glow">
+                    <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-white text-black text-[10px] uppercase tracking-widest font-semibold shadow-sm">
                       {p.cat}
                     </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/50 via-background/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
                   <div className="p-6">
                     <div className="text-xs text-muted-foreground uppercase tracking-widest">{p.tag}</div>
@@ -90,7 +92,7 @@ const Products = () => {
                       <span className="font-display text-xl font-bold text-gradient-primary">{p.price}</span>
                       <Link
                         to="/contact"
-                        className="px-4 py-2 rounded-full bg-primary/15 hover:bg-gradient-primary hover:text-primary-foreground text-primary-glow text-xs font-semibold transition-all hover:shadow-glow-soft"
+                        className="px-4 py-2 rounded-full bg-white border border-primary text-primary hover:bg-gradient-primary hover:text-primary-foreground hover:border-transparent text-xs font-semibold transition-all hover:shadow-glow-soft"
                       >
                         Enquire Now
                       </Link>
