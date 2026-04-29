@@ -10,11 +10,11 @@ import productAccessories from "@/assets/product-accessories.jpg";
 import { Blobs, WaveDivider, SectionHeader } from "@/components/Decor";
 import { Counter } from "@/components/Counter";
 
-const EASE = [0.22, 1, 0.36, 1] as const;
+const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 30 },
-  show: (i: number = 0) => ({ opacity: 1, y: 0, transition: { delay: i * 0.08, duration: 0.7, ease: EASE as unknown as number[] } }),
+  show: (i: number = 0) => ({ opacity: 1, y: 0, transition: { delay: i * 0.08, duration: 0.7, ease: EASE } }),
 };
 
 const Home = () => {
