@@ -115,8 +115,6 @@
     opacity: 0.35;
     pointer-events: none;
   }
-    pointer-events: none;
-  }
 
   .grid-pattern {
     background-image:
