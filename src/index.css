@@ -112,7 +112,9 @@
     position: absolute;
     border-radius: 50%;
     filter: blur(90px);
-    opacity: 0.45;
+    opacity: 0.35;
+    pointer-events: none;
+  }
     pointer-events: none;
   }
 
