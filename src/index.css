@@ -83,10 +83,10 @@
 
 @layer components {
   .glass {
-    @apply backdrop-blur-xl bg-white/60 border border-white/70;
+    @apply backdrop-blur-xl bg-white/70 border border-black/5 shadow-[0_4px_20px_-8px_rgba(0,0,0,0.08)];
   }
   .glass-strong {
-    @apply backdrop-blur-2xl bg-white/75 border border-white/80;
+    @apply backdrop-blur-2xl bg-white/85 border border-black/5 shadow-[0_8px_30px_-12px_rgba(0,0,0,0.1)];
   }
   .text-gradient {
     background: var(--gradient-text);
