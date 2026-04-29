@@ -12,8 +12,8 @@ export const WaveDivider = ({ flip = false }: { flip?: boolean }) => (
     <svg viewBox="0 0 1440 120" preserveAspectRatio="none" className="w-full h-[80px] md:h-[120px]">
       <defs>
         <linearGradient id="waveGrad" x1="0" x2="1">
-          <stop offset="0" stopColor="hsl(142 76% 45% / 0.15)" />
-          <stop offset="1" stopColor="hsl(130 90% 60% / 0.15)" />
+          <stop offset="0" stopColor="hsl(152 60% 42% / 0.2)" />
+          <stop offset="1" stopColor="hsl(150 70% 55% / 0.2)" />
         </linearGradient>
       </defs>
       <path
@@ -22,7 +22,7 @@ export const WaveDivider = ({ flip = false }: { flip?: boolean }) => (
       />
       <path
         d="M0,80 C320,32 640,128 960,80 C1200,48 1320,96 1440,80 L1440,120 L0,120 Z"
-        fill="hsl(150 18% 7% / 0.6)"
+        fill="hsl(150 40% 99% / 0.9)"
       />
     </svg>
   </div>
