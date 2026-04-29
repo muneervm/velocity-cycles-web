@@ -13,8 +13,25 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        display: ['Sora', 'sans-serif'],
+        sans: ['Space Grotesk', 'sans-serif'],
+      },
+      backgroundImage: {
+        'gradient-primary': 'var(--gradient-primary)',
+        'gradient-hero': 'var(--gradient-hero)',
+        'gradient-card': 'var(--gradient-card)',
+        'gradient-text': 'var(--gradient-text)',
+      },
+      boxShadow: {
+        'glow': 'var(--shadow-glow)',
+        'glow-soft': 'var(--shadow-glow-soft)',
+        'elegant': 'var(--shadow-elegant)',
+        'lift': 'var(--shadow-lift)',
+      },
       colors: {
         border: "hsl(var(--border))",
+        'primary-glow': "hsl(var(--primary-glow))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
