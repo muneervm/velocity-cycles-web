@@ -79,7 +79,7 @@ const Home = () => {
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.9, duration: 0.7 }}
+              transition={{ delay: 0.45, duration: 0.7 }}
               className="mt-6 max-w-xl text-lg text-muted-foreground leading-relaxed"
             >
               Premium cycles, expert service and a community built for the open road.
@@ -89,20 +89,19 @@ const Home = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.1, duration: 0.7 }}
+              transition={{ delay: 0.6, duration: 0.7 }}
               className="mt-9 flex flex-wrap gap-4"
             >
               <Link
                 to="/products"
-                className="group relative inline-flex items-center gap-2 px-7 py-4 rounded-2xl bg-gradient-primary text-primary-foreground font-semibold shadow-glow-soft hover:shadow-glow hover:scale-[1.04] transition-all"
+                className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-primary text-primary-foreground font-semibold shadow-glow-soft hover:shadow-glow transition-shadow"
               >
-                <span className="absolute inset-0 rounded-2xl bg-gradient-primary blur-lg opacity-50 -z-10" />
                 Explore Products
-                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                <ArrowRight size={18} className="group-hover:translate-x-0.5 transition-transform" />
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 px-7 py-4 rounded-2xl glass-strong hover:bg-white/[0.08] transition font-semibold"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl glass-strong hover:bg-white/[0.07] transition-colors font-semibold"
               >
                 Contact Us
               </Link>
@@ -112,7 +111,7 @@ const Home = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.3, duration: 0.7 }}
+              transition={{ delay: 0.75, duration: 0.7 }}
               className="mt-14 grid grid-cols-3 gap-6 max-w-md"
             >
               {[
@@ -132,13 +131,13 @@ const Home = () => {
 
           {/* Floating glass card */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.85, rotate: -4 }}
-            animate={{ opacity: 1, scale: 1, rotate: 0 }}
-            transition={{ delay: 0.7, duration: 1, ease: [0.22, 1, 0.36, 1] }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.9, ease: EASE }}
             className="hidden lg:block lg:col-span-5"
           >
-            <div className="relative animate-float">
-              <div className="absolute -inset-6 bg-gradient-primary rounded-[2.5rem] blur-3xl opacity-30" />
+            <div className="relative">
+              <div className="absolute -inset-6 bg-gradient-primary rounded-[2.5rem] blur-3xl opacity-15" />
               <div className="relative glass-strong rounded-[2rem] p-7 shadow-elegant">
                 <div className="flex items-center justify-between mb-5">
                   <span className="text-xs uppercase tracking-[0.2em] text-primary-glow">Featured</span>
@@ -156,17 +155,6 @@ const Home = () => {
               </div>
             </div>
           </motion.div>
-        </motion.div>
-
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.6 }}
-          className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground text-xs uppercase tracking-widest"
-        >
-          <span>Scroll</span>
-          <div className="w-px h-10 bg-gradient-to-b from-primary-glow to-transparent" />
         </motion.div>
       </section>
 
