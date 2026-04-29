@@ -1,4 +1,4 @@
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, type Variants } from "framer-motion";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Sparkles, ShieldCheck, Wrench, Bike, Star, Quote } from "lucide-react";
@@ -10,9 +10,11 @@ import productAccessories from "@/assets/product-accessories.jpg";
 import { Blobs, WaveDivider, SectionHeader } from "@/components/Decor";
 import { Counter } from "@/components/Counter";
 
-const fadeUp = {
+const EASE = [0.22, 1, 0.36, 1] as const;
+
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 30 },
-  show: (i = 0) => ({ opacity: 1, y: 0, transition: { delay: i * 0.08, duration: 0.7, ease: [0.22, 1, 0.36, 1] } }),
+  show: (i: number = 0) => ({ opacity: 1, y: 0, transition: { delay: i * 0.08, duration: 0.7, ease: EASE as unknown as number[] } }),
 };
 
 const Home = () => {
