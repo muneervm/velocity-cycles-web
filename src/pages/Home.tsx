@@ -63,23 +63,18 @@ const Home = () => {
               transition={{ delay: 0.2, duration: 0.6 }}
               className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full text-xs uppercase tracking-[0.2em] text-primary-glow"
             >
-              <span className="w-2 h-2 rounded-full bg-primary-glow animate-pulse-glow" />
+              <span className="w-1.5 h-1.5 rounded-full bg-primary-glow" />
               Nedumangad · Kerala · Est. 2014
             </motion.span>
 
-            <h1 className="mt-6 font-display font-bold text-5xl sm:text-6xl lg:text-8xl leading-[0.95] tracking-tight">
-              {["Ride", "Beyond", "Ordinary."].map((w, i) => (
-                <motion.span
-                  key={w}
-                  initial={{ opacity: 0, y: 60, filter: "blur(10px)" }}
-                  animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                  transition={{ delay: 0.3 + i * 0.15, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-                  className="block"
-                >
-                  {i === 1 ? <span className="text-gradient-primary">{w}</span> : w}
-                </motion.span>
-              ))}
-            </h1>
+            <motion.h1
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.25, duration: 0.8, ease: EASE }}
+              className="mt-6 font-display font-bold text-5xl sm:text-6xl lg:text-8xl leading-[0.95] tracking-tight"
+            >
+              Ride <span className="text-gradient-primary">Beyond</span><br/>Ordinary.
+            </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
