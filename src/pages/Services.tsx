@@ -29,9 +29,8 @@ const Services = () => (
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
-            transition={{ delay: i * 0.08, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            whileHover={{ y: -5 }}
             transition={{ delay: i * 0.06, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            whileHover={{ y: -5 }}
             className="group relative p-8 rounded-3xl glass hover:border-primary/30 transition-colors overflow-hidden"
           >
             <div className="relative">
