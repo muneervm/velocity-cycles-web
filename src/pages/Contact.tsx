@@ -111,7 +111,7 @@ const Contact = () => {
 
                     <button
                       type="submit"
-                      className="group relative inline-flex items-center gap-2 px-7 py-4 rounded-2xl bg-gradient-primary text-primary-foreground font-semibold shadow-glow-soft hover:shadow-glow hover:scale-[1.03] transition-all"
+                      className="group relative inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-primary text-primary-foreground font-semibold shadow-glow-soft hover:shadow-glow transition-shadow"
                     >
                       Send message <Send size={16} className="group-hover:translate-x-1 transition" />
                     </button>

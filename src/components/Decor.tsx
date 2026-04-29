@@ -2,9 +2,8 @@ import { motion } from "framer-motion";
 
 export const Blobs = () => (
   <div className="absolute inset-0 overflow-hidden pointer-events-none -z-10">
-    <div className="blob bg-primary/40 w-[500px] h-[500px] -top-32 -left-32" />
-    <div className="blob bg-accent/30 w-[600px] h-[600px] top-1/3 -right-40" style={{ animationDelay: "-6s" }} />
-    <div className="blob bg-primary-glow/25 w-[450px] h-[450px] bottom-0 left-1/3" style={{ animationDelay: "-12s" }} />
+    <div className="blob bg-primary/30 w-[480px] h-[480px] -top-32 -left-32" />
+    <div className="blob bg-accent/20 w-[560px] h-[560px] top-1/3 -right-40" />
   </div>
 );
 

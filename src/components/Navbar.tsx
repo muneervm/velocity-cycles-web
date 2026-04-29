@@ -38,9 +38,8 @@ export const Navbar = () => {
           scrolled ? "glass-strong shadow-elegant" : "bg-transparent"
         }`}>
           <Link to="/" className="flex items-center gap-2.5 group">
-            <span className="relative w-9 h-9 rounded-xl bg-gradient-primary grid place-items-center font-display font-bold text-primary-foreground shadow-glow-soft group-hover:scale-110 transition-transform">
+            <span className="relative w-9 h-9 rounded-xl bg-gradient-primary grid place-items-center font-display font-bold text-primary-foreground shadow-glow-soft transition-transform group-hover:scale-105">
               T
-              <span className="absolute inset-0 rounded-xl bg-gradient-primary blur-lg opacity-50 -z-10 animate-pulse-glow" />
             </span>
             <div className="leading-tight">
               <div className="font-display font-bold text-base">Toysvilla</div>
@@ -78,7 +77,7 @@ export const Navbar = () => {
 
           <Link
             to="/contact"
-            className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-primary text-primary-foreground text-sm font-semibold shadow-glow-soft hover:shadow-glow hover:scale-[1.03] transition-all"
+            className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-primary text-primary-foreground text-sm font-semibold shadow-glow-soft hover:shadow-glow transition-shadow"
           >
             Get in Touch
           </Link>

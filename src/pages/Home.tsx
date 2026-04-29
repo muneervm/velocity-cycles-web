@@ -63,28 +63,23 @@ const Home = () => {
               transition={{ delay: 0.2, duration: 0.6 }}
               className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full text-xs uppercase tracking-[0.2em] text-primary-glow"
             >
-              <span className="w-2 h-2 rounded-full bg-primary-glow animate-pulse-glow" />
+              <span className="w-1.5 h-1.5 rounded-full bg-primary-glow" />
               Nedumangad · Kerala · Est. 2014
             </motion.span>
 
-            <h1 className="mt-6 font-display font-bold text-5xl sm:text-6xl lg:text-8xl leading-[0.95] tracking-tight">
-              {["Ride", "Beyond", "Ordinary."].map((w, i) => (
-                <motion.span
-                  key={w}
-                  initial={{ opacity: 0, y: 60, filter: "blur(10px)" }}
-                  animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                  transition={{ delay: 0.3 + i * 0.15, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-                  className="block"
-                >
-                  {i === 1 ? <span className="text-gradient-primary">{w}</span> : w}
-                </motion.span>
-              ))}
-            </h1>
+            <motion.h1
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.25, duration: 0.8, ease: EASE }}
+              className="mt-6 font-display font-bold text-5xl sm:text-6xl lg:text-8xl leading-[0.95] tracking-tight"
+            >
+              Ride <span className="text-gradient-primary">Beyond</span><br/>Ordinary.
+            </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.9, duration: 0.7 }}
+              transition={{ delay: 0.45, duration: 0.7 }}
               className="mt-6 max-w-xl text-lg text-muted-foreground leading-relaxed"
             >
               Premium cycles, expert service and a community built for the open road.
@@ -94,20 +89,19 @@ const Home = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.1, duration: 0.7 }}
+              transition={{ delay: 0.6, duration: 0.7 }}
               className="mt-9 flex flex-wrap gap-4"
             >
               <Link
                 to="/products"
-                className="group relative inline-flex items-center gap-2 px-7 py-4 rounded-2xl bg-gradient-primary text-primary-foreground font-semibold shadow-glow-soft hover:shadow-glow hover:scale-[1.04] transition-all"
+                className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-primary text-primary-foreground font-semibold shadow-glow-soft hover:shadow-glow transition-shadow"
               >
-                <span className="absolute inset-0 rounded-2xl bg-gradient-primary blur-lg opacity-50 -z-10" />
                 Explore Products
-                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                <ArrowRight size={18} className="group-hover:translate-x-0.5 transition-transform" />
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 px-7 py-4 rounded-2xl glass-strong hover:bg-white/[0.08] transition font-semibold"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl glass-strong hover:bg-white/[0.07] transition-colors font-semibold"
               >
                 Contact Us
               </Link>
@@ -117,7 +111,7 @@ const Home = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.3, duration: 0.7 }}
+              transition={{ delay: 0.75, duration: 0.7 }}
               className="mt-14 grid grid-cols-3 gap-6 max-w-md"
             >
               {[
@@ -137,13 +131,13 @@ const Home = () => {
 
           {/* Floating glass card */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.85, rotate: -4 }}
-            animate={{ opacity: 1, scale: 1, rotate: 0 }}
-            transition={{ delay: 0.7, duration: 1, ease: [0.22, 1, 0.36, 1] }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.9, ease: EASE }}
             className="hidden lg:block lg:col-span-5"
           >
-            <div className="relative animate-float">
-              <div className="absolute -inset-6 bg-gradient-primary rounded-[2.5rem] blur-3xl opacity-30" />
+            <div className="relative">
+              <div className="absolute -inset-6 bg-gradient-primary rounded-[2.5rem] blur-3xl opacity-15" />
               <div className="relative glass-strong rounded-[2rem] p-7 shadow-elegant">
                 <div className="flex items-center justify-between mb-5">
                   <span className="text-xs uppercase tracking-[0.2em] text-primary-glow">Featured</span>
@@ -161,17 +155,6 @@ const Home = () => {
               </div>
             </div>
           </motion.div>
-        </motion.div>
-
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.6 }}
-          className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground text-xs uppercase tracking-widest"
-        >
-          <span>Scroll</span>
-          <div className="w-px h-10 bg-gradient-to-b from-primary-glow to-transparent" />
         </motion.div>
       </section>
 
@@ -195,11 +178,11 @@ const Home = () => {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true, margin: "-60px" }}
-                whileHover={{ y: -8 }}
-                className="group relative p-7 rounded-2xl glass hover:border-primary/40 transition-all"
+                whileHover={{ y: -4 }}
+                transition={{ duration: 0.3, ease: EASE }}
+                className="group relative p-7 rounded-2xl glass hover:border-primary/30 transition-colors"
               >
-                <div className="absolute inset-0 rounded-2xl bg-gradient-primary opacity-0 group-hover:opacity-10 transition-opacity" />
-                <div className="w-12 h-12 rounded-xl bg-primary/15 grid place-items-center text-primary-glow mb-5 group-hover:scale-110 group-hover:rotate-6 transition-transform">
+                <div className="w-12 h-12 rounded-xl bg-primary/15 grid place-items-center text-primary-glow mb-5">
                   <f.icon size={22} />
                 </div>
                 <h3 className="font-display font-semibold text-lg mb-2">{f.title}</h3>
@@ -227,11 +210,12 @@ const Home = () => {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true, margin: "-60px" }}
-                whileHover={{ y: -10 }}
-                className="group relative rounded-2xl overflow-hidden glass hover:shadow-lift transition-all"
+                whileHover={{ y: -5 }}
+                transition={{ duration: 0.3, ease: EASE }}
+                className="group relative rounded-2xl overflow-hidden glass hover:shadow-lift transition-shadow"
               >
                 <div className="aspect-square overflow-hidden bg-gradient-to-br from-primary/5 to-accent/5">
-                  <img src={p.img} alt={p.name} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                  <img src={p.img} alt={p.name} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="p-5">
@@ -275,7 +259,7 @@ const Home = () => {
               <p className="mt-4 text-muted-foreground">Free helmet & 1-year service plan with every premium cycle this season.</p>
             </div>
             <div className="md:justify-self-end">
-              <Link to="/products" className="inline-flex items-center gap-2 px-7 py-4 rounded-2xl bg-gradient-primary text-primary-foreground font-semibold shadow-glow-soft hover:shadow-glow hover:scale-[1.03] transition-all">
+              <Link to="/products" className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl bg-gradient-primary text-primary-foreground font-semibold shadow-glow-soft hover:shadow-glow transition-shadow">
                 Claim Offer <ArrowRight size={18} />
               </Link>
             </div>
@@ -296,7 +280,7 @@ const Home = () => {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true }}
-                whileHover={{ y: -6 }}
+                whileHover={{ y: -3 }}
                 className="relative p-7 rounded-2xl glass hover:border-primary/30 transition"
               >
                 <Quote className="text-primary-glow/40 mb-3" size={28} />

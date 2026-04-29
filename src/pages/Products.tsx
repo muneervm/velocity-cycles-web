@@ -69,13 +69,13 @@ const Products = () => {
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ delay: i * 0.05, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                whileHover={{ y: -10 }}
+                whileHover={{ y: -5 }}
                 className="group relative rounded-3xl overflow-hidden"
               >
-                <div className="absolute -inset-px rounded-3xl bg-gradient-to-br from-primary/40 via-transparent to-accent/40 opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute -inset-px rounded-3xl bg-gradient-to-br from-primary/30 via-transparent to-accent/30 opacity-0 group-hover:opacity-100 transition-opacity" />
                 <div className="relative glass rounded-3xl overflow-hidden">
                   <div className="relative aspect-[4/3] overflow-hidden bg-gradient-to-br from-primary/5 to-accent/10">
-                    <img src={p.img} alt={p.name} loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                    <img src={p.img} alt={p.name} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                     <div className="absolute top-4 left-4 px-3 py-1 rounded-full glass-strong text-[10px] uppercase tracking-widest text-primary-glow">
                       {p.cat}
                     </div>
